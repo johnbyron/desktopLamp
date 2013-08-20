@@ -85,10 +85,25 @@ final int diam = 20;
   int max = 10;
   //
   
-   Map.Entry me1 = (Map.Entry) listOfColors.get(3);
+   
+    for (int i = 0; i < 10; i++)
+  {
+     Map.Entry me1 = (Map.Entry) listOfColors.get(i);
+    SmallColor top1 = (SmallColor) me1.getKey();
+
+    int[]avoid={16,16,16};
+    int[]avoid2={0,0,0};
+    if(!Arrays.equals(top1.GetColor(),avoid)&&
+    top1.GetColor()[0]!=top1.GetColor()[1]&&top1.GetColor()[1]!=top1.GetColor()[2])
+    {
+      return top1.GetColor();
+    }
+    
+  }
+  
+ Map.Entry me1 = (Map.Entry) listOfColors.get(1);
     SmallColor top1 = (SmallColor) me1.getKey();
     return top1.GetColor();
-    
     //
 /*  for (int i = 0; i < max; i++)
   {
