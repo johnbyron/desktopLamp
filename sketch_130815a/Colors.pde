@@ -86,18 +86,14 @@ final int diam = 20;
   //
   
    
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10 && i < listOfColors.size(); i++)
   {
      Map.Entry me1 = (Map.Entry) listOfColors.get(i);
     SmallColor top1 = (SmallColor) me1.getKey();
 
-    int[]avoid={16,16,16};
-    int[]avoid2={0,0,0};
-    if(!Arrays.equals(top1.GetColor(),avoid)&&
-    top1.GetColor()[0]!=top1.GetColor()[1]&&top1.GetColor()[1]!=top1.GetColor()[2])
-    {
+
       return top1.GetColor();
-    }
+   
     
   }
   
